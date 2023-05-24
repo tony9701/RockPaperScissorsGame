@@ -6,25 +6,30 @@ public class Player {
     private static final String SCISSORS = "Scissors";
 
 
-    void playerMoves() {
+    public String playerMoves() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Choose:\n\n[R]ock\n[P]aper\n[S]cissors\n");
+        System.out.printf("\nChoose:\n\n[R]ock\n[P]aper\n[S]cissors\n");
 
-        //Taking the player move
+        //Taking the player move and making while loop until the user input is valid!
         String move = scanner.nextLine();
-
-        if (move.equalsIgnoreCase("r") || move.equalsIgnoreCase("rock")) {
-            move = ROCK;
-        } else if (move.equalsIgnoreCase("p") || move.equalsIgnoreCase("paper")) {
-            move = PAPER;
-        } else if (move.equalsIgnoreCase("s") || move.equalsIgnoreCase("scissors")) {
-        move = SCISSORS;
-        } else {
-            System.out.printf("Invalid command. Please try again!\n");
-            System.out.printf("Choose:\n\n[R]ock\n[P]aper\n[S]cissors\n");
-            move = scanner.nextLine();
+        while (true) {
+            if (move.equalsIgnoreCase("r") || move.equalsIgnoreCase("rock")) {
+                move = ROCK;
+                break;
+            } else if (move.equalsIgnoreCase("p") || move.equalsIgnoreCase("paper")) {
+                move = PAPER;
+                break;
+            } else if (move.equalsIgnoreCase("s") || move.equalsIgnoreCase("scissors")) {
+                move = SCISSORS;
+                break;
+            } else {
+                System.out.printf("Invalid command. Please try again!\n");
+                System.out.printf("Choose:\n\n[R]ock\n[P]aper\n[S]cissors\n");
+                move = scanner.nextLine();
+            }
         }
+        return move;
     }
 }
 

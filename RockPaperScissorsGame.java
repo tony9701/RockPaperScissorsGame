@@ -3,8 +3,11 @@ import java.util.Scanner;
 public class RockPaperScissorsGame {
 
     public static void main(String[] args) {
-        Player toni = new Player();
+        Player Toni = new Player();
+        Computer PC = new Computer();
+        GameLogic newGame = new GameLogic();
 
-        toni.playerMoves();
+        newGame.gameLogic(Toni.playerMoves(), PC.ComputerMove());
+
     }
 }

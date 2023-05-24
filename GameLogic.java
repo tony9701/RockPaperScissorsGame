@@ -6,7 +6,6 @@ public class GameLogic {
         boolean isScissors = false;
         boolean isPlayerWin = false;
         boolean isComputerWin = false;
-        boolean isDraw = false;
 
         //Checking player move and changing its flag to TRUE;
         switch (playerMove) {
@@ -24,9 +23,8 @@ public class GameLogic {
         //Checking computer move and also checking the player move (boolean flag)
         switch (computerMove) {
             case "Rock":
-                if (isRock) {
-                    isDraw = true;
-                } else if (isPaper) {
+
+                if (isPaper) {
                     isPlayerWin = true;
                 } else if (isScissors) {
                     isComputerWin = true;
@@ -35,8 +33,6 @@ public class GameLogic {
             case "Paper":
                 if (isRock) {
                     isComputerWin = true;
-                } else if (isPaper) {
-                    isDraw = true;
                 } else if (isScissors) {
                     isPlayerWin = true;
                 }
@@ -46,8 +42,6 @@ public class GameLogic {
                     isPlayerWin = true;
                 } else if (isPaper) {
                     isComputerWin = true;
-                } else if (isScissors) {
-                    isDraw = true;
                 }
                 break;
         }

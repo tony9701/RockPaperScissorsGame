@@ -1,5 +1,7 @@
 public class GameLogic {
-    void gameLogic(String playerMove, String computerMove) {
+    int playerWins;
+    int computerWins;
+    public void gameLogic(String playerMove, String computerMove) {
         //Flags
         boolean isRock = false;
         boolean isPaper = false;
@@ -49,10 +51,33 @@ public class GameLogic {
         //Printing the winner!
         if (isPlayerWin) {
             System.out.printf("Player is winning!\n");
+            counter(1);
         } else if (isComputerWin) {
             System.out.printf("Computer is winning!\n");
+            counter(2);
         } else {
             System.out.printf("It's a draw!\n");
         }
+    }
+
+    public int counter(int countIndex) {
+
+
+        if (countIndex == 1) {
+            playerWins++;
+            System.out.printf("Player counts: %d\n", playerWins);
+        } else if (countIndex == 2) {
+            computerWins++;
+            System.out.printf("Computer counts: %d\n", computerWins);
+        }
+
+        if (playerWins == 5) {
+            System.out.printf("test1\n");
+            return 1;
+        } else if (computerWins == 5) {
+            System.out.printf("test2\n");
+            return 2;
+        }
+        return 0;
     }
 }

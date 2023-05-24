@@ -6,8 +6,9 @@ public class RockPaperScissorsGame {
         Player Toni = new Player();
         Computer PC = new Computer();
         GameLogic newGame = new GameLogic();
+        for (int i = 0; i < 5; i++) {
 
-        newGame.gameLogic(Toni.playerMoves(), PC.ComputerMove());
-
+            newGame.gameLogic(Toni.playerMoves(), PC.ComputerMove());
+        }
     }
 }

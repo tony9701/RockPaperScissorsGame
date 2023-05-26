@@ -12,7 +12,6 @@ public class Player {
         System.out.printf("""
 
                 Choose:
-
                 *********************
                      [R]ock
                      [P]aper
@@ -36,7 +35,6 @@ public class Player {
                 System.out.printf("Invalid command. Please try again!\n");
                 System.out.printf("""
                         Choose:
-
                         *********************
                              [R]ock
                              [P]aper

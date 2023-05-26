@@ -48,7 +48,7 @@ public class GameLogic {
                 break;
         }
 
-        //Printing the winner!
+        //Printing the winner and calling the counter method!
         if (isPlayerWin) {
             System.out.printf("Player is winning!\n");
             counter(1);
@@ -56,7 +56,7 @@ public class GameLogic {
             System.out.printf("Computer is winning!\n");
             counter(2);
         } else {
-            System.out.printf("It's a draw!\n");
+            System.out.printf("It's a draw!\n---------------------\n");
         }
     }
 
@@ -65,17 +65,17 @@ public class GameLogic {
 
         if (countIndex == 1) {
             playerWins++;
-            System.out.printf("Player counts: %d\n", playerWins);
+            System.out.printf("Player wins: %d\n---------------------\n", playerWins);
         } else if (countIndex == 2) {
             computerWins++;
-            System.out.printf("Computer counts: %d\n", computerWins);
+            System.out.printf("Computer wins: %d\n---------------------\n", computerWins);
         }
 
-        if (playerWins == 5) {
-            System.out.printf("test1\n");
+        if (playerWins == 3) {
+            System.out.printf("\nYou are the CHAMPION! ^_^\n");
             return 1;
-        } else if (computerWins == 5) {
-            System.out.printf("test2\n");
+        } else if (computerWins == 3) {
+            System.out.printf("\nThe computer is the CHAMPION! :(\n");
             return 2;
         }
         return 0;

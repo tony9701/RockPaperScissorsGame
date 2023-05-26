@@ -9,7 +9,16 @@ public class Player {
     public String playerMoves() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("\nChoose:\n\n[R]ock\n[P]aper\n[S]cissors\n");
+        System.out.printf("""
+
+                Choose:
+
+                *********************
+                     [R]ock
+                     [P]aper
+                     [S]cissors
+                *********************
+                """);
 
         //Taking the player move and making while loop until the user input is valid!
         String move = scanner.nextLine();
@@ -25,7 +34,15 @@ public class Player {
                 break;
             } else {
                 System.out.printf("Invalid command. Please try again!\n");
-                System.out.printf("Choose:\n\n[R]ock\n[P]aper\n[S]cissors\n");
+                System.out.printf("""
+                        Choose:
+
+                        *********************
+                             [R]ock
+                             [P]aper
+                             [S]cissors
+                        *********************
+                        """);
                 move = scanner.nextLine();
             }
         }

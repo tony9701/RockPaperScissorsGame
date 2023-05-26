@@ -15,7 +15,7 @@ public class RockPaperScissorsGame {
             } else if (newGame.playerWins == 3) {
                 break;
             }
-            Thread.sleep(900);
+            Thread.sleep(1500);
         }
     }
 }

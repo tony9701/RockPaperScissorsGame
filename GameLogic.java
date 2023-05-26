@@ -12,12 +12,15 @@ public class GameLogic {
         //Checking player move and changing its flag to TRUE;
         switch (playerMove) {
             case "Rock":
+                System.out.printf("You chose ROCK, ");
                 isRock = true;
                 break;
             case "Paper":
+                System.out.printf("You chose PAPER, ");
                 isPaper = true;
                 break;
             case "Scissors":
+                System.out.printf("You chose SCISSORS, ");
                 isScissors = true;
                 break;
         }
@@ -25,7 +28,7 @@ public class GameLogic {
         //Checking computer move and also checking the player move (boolean flag)
         switch (computerMove) {
             case "Rock":
-
+            System.out.printf("the computer chose ROCK.\n");
                 if (isPaper) {
                     isPlayerWin = true;
                 } else if (isScissors) {
@@ -33,6 +36,7 @@ public class GameLogic {
                 }
                 break;
             case "Paper":
+                System.out.printf("the computer chose PAPER.\n");
                 if (isRock) {
                     isComputerWin = true;
                 } else if (isScissors) {
@@ -40,6 +44,7 @@ public class GameLogic {
                 }
                 break;
             case "Scissors":
+                System.out.printf("the computer chose SCISSORS.\n");
                 if (isRock) {
                     isPlayerWin = true;
                 } else if (isPaper) {
@@ -50,10 +55,10 @@ public class GameLogic {
 
         //Printing the winner and calling the counter method!
         if (isPlayerWin) {
-            System.out.printf("Player is winning!\n");
+            System.out.printf("You win!\n");
             counter(1);
         } else if (isComputerWin) {
-            System.out.printf("Computer is winning!\n");
+            System.out.printf("Computer win!\n");
             counter(2);
         } else {
             System.out.printf("It's a draw!\n---------------------\n");
@@ -65,7 +70,7 @@ public class GameLogic {
 
         if (countIndex == 1) {
             playerWins++;
-            System.out.printf("Player wins: %d\n---------------------\n", playerWins);
+            System.out.printf("Your wins: %d\n---------------------\n", playerWins);
         } else if (countIndex == 2) {
             computerWins++;
             System.out.printf("Computer wins: %d\n---------------------\n", computerWins);

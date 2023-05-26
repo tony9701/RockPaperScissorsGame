@@ -70,11 +70,13 @@ public class GameLogic {
 
         if (countIndex == 1) {
             playerWins++;
-            System.out.printf("Your wins: %d\n---------------------\n", playerWins);
+
         } else if (countIndex == 2) {
             computerWins++;
-            System.out.printf("Computer wins: %d\n---------------------\n", computerWins);
+//            System.out.printf("Computer wins: %d\n---------------------\n", computerWins);
         }
+
+        System.out.printf("Result -->  %d : %d\n---------------------\n", playerWins, computerWins);
 
         if (playerWins == 3) {
             System.out.printf("\nYou are the CHAMPION! ^_^\n");
